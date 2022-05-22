@@ -6,7 +6,7 @@ Website for Albemarle High School Robotics.
 
 If you would like to contribute to this repository, download Visual Studio Code and git, open your Visual Studio Code terminal with CTRL + `, and type 'git clone https://github.com/albemarlerobotics/albemarlerobotics.github.io.git'.
 
-Once you have made your desired changes and saved the files, type in your terminal 'git add .' followed by 'git commit -m "Description of your change"', and, finally 'git push -u origin main'.
+Once you have made your desired changes and saved the files with CTRL + s, type in your terminal 'git add .' followed by 'git commit -m "Description of your change"', and, finally 'git push -u origin main'.
 
 The add command stages your changes, the commit command saves your stages changes to your local git repository, and the push command pushes your commits to the online repository on GitHub.
 
