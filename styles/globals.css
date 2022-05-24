@@ -133,6 +133,35 @@ nav {
   }
 }
 
+.block-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 26rem);
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.block {
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 1rem;
+  background-color: black;
+  color: white;
+}
+
+.block:hover {
+  background-color: white;
+}
+
+.block img {
+  border: 1px solid black;
+  border-radius: 1rem;
+  width: 20rem;
+  margin-top: 0.5rem;
+}
+
 /* if mobile */
 @media (max-aspect-ratio: 1/1), (aspect-ratio: 1/1) {
   .main {
