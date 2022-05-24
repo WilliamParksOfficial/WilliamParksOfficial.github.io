@@ -165,7 +165,6 @@ nav {
 
 .team-block-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 30rem);
   column-gap: 0.5rem;
   row-gap: 0.5rem;
   margin-bottom: 1rem;
@@ -264,6 +263,10 @@ nav {
   .text {
     font-size: 1.5rem;
   }
+
+  .team-block-container {
+    grid-template-columns: repeat(auto-fill, 20rem);
+  }
 }
 
 /* if desktop */
@@ -302,5 +305,9 @@ nav {
 
   .text {
     font-size: 3rem;
+  }
+
+  .team-block-container {
+    grid-template-columns: repeat(auto-fill, 30rem);
   }
 }
