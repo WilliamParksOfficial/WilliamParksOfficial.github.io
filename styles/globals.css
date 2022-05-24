@@ -12,10 +12,6 @@ a {
   color: darkblue;
 }
 
-a:hover {
-  color: darkred;
-}
-
 .center {
   text-align: center;
 }
@@ -40,6 +36,10 @@ nav {
 .nav-links a {
   display: inline-block;
   line-height: 2rem;
+}
+
+.nav-links a:hover {
+  color: darkred;
 }
 
 .current-page {
@@ -133,7 +133,7 @@ nav {
   }
 }
 
-.block-container {
+.role-block-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 20rem);
   column-gap: 0.5rem;
@@ -143,7 +143,7 @@ nav {
   text-align: center;
 }
 
-.block {
+.role-block {
   display: inline-block;
   border: 2px solid black;
   border-radius: 1rem;
@@ -151,15 +151,80 @@ nav {
   color: white;
 }
 
-.block:hover {
+.role-block:hover {
   background-color: white;
+  color: black;
 }
 
-.block img {
+.role-block img {
   border: 1px solid black;
   border-radius: 1rem;
   width: 18rem;
   margin-top: 0.5rem;
+}
+
+.team-block-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 30rem);
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.team-block {
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 1rem;
+}
+
+.team-block:hover {
+  background-color: white;
+}
+
+.team-block h2 {
+  font-size: 3rem;
+}
+
+#paradigm-team-block {
+  background-image: radial-gradient(at bottom right, orange, blue);
+  color: black;
+}
+
+#paradigm-team-block:hover {
+  background-image: radial-gradient(at bottom right, blue, orange);
+  color: white;
+}
+
+#firefly-team-block {
+  background-image: radial-gradient(at bottom left, orange, red);
+  color: black;
+}
+
+#firefly-team-block:hover {
+  background-image: radial-gradient(at bottom left, red, orange);
+  color: white;
+}
+
+#vertigo-team-block {
+  background-image: radial-gradient(at top right, orange, green);
+  color: black;
+}
+
+#vertigo-team-block:hover {
+  background-image: radial-gradient(at top right, green, orange);
+  color: white;
+}
+
+#monotonics-team-block {
+  background-image: radial-gradient(at top left, orange, purple);
+  color: black;
+}
+
+#monotonics-team-block:hover {
+  background-image: radial-gradient(at top left, purple, orange);
+  color: white;
 }
 
 /* if mobile */
