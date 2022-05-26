@@ -9,76 +9,83 @@
     <link rel="stylesheet" href="/styles/globals.css" />
   </head>
   <body>
-    <!-- Navbar -->
-    <nav>
-      <!-- ACPS Logo -->
-      <a href="/">
-        <img
-          class="nav-logo"
-          src="/images/ACPSLogoDark.png"
-          alt="Albemarle County Public Schools Dark Logo"
-        />
-      </a>
-      <!-- Page Links -->
-      <div class="nav-links">
-        <a href="/" class="current-page">Home</a>
-        <a href="/roles/">Roles</a>
-        <a href="/teams/">Teams</a>
+    <header>
+      <!-- Navbar -->
+      <nav>
+        <!-- ACPS Logo -->
+        <a href="/">
+          <img
+            class="nav-logo"
+            src="/images/ACPSLogoDark.png"
+            alt="Albemarle County Public Schools Dark Logo"
+          />
+        </a>
+        <!-- Page Links -->
+        <div class="nav-links">
+          <a href="/" class="current-page">Home</a>
+          <a href="/roles/">Roles</a>
+          <a href="/teams/">Teams</a>
+        </div>
+      </nav>
+
+      <!-- Slideshow -->
+      <div class="slideshow-container">
+        <!-- Images (Need 4:1 Aspect Ratio) -->
+        <div class="mySlides fade">
+          <img
+            src="/images/FireflyCompetitionWide.jpg"
+            alt="Firefly at Competition"
+          />
+          <div class="text">Albemarle Robotics</div>
+        </div>
+
+        <div class="mySlides fade">
+          <img
+            src="/images/JouettSTEMDayWide.png"
+            alt="Jouett Middle School STEM Day"
+          />
+          <div class="text">Albemarle Robotics</div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="/images/NerdsOfTheNorthWide.png" alt="Nerds of the North" />
+          <div class="text">Albemarle Robotics</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
-    </nav>
+      <br />
 
-    <!-- Slideshow -->
-    <div class="slideshow-container">
-      <!-- Images (Need 4:1 Aspect Ratio) -->
-      <div class="mySlides fade">
-        <img
-          src="/images/FireflyCompetitionWide.jpg"
-          alt="Firefly at Competition"
-        />
-        <div class="text">Albemarle Robotics</div>
+      <!-- The dots/circles -->
+      <div class="center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
       </div>
-
-      <div class="mySlides fade">
-        <img
-          src="/images/JouettSTEMDayWide.png"
-          alt="Jouett Middle School STEM Day"
-        />
-        <div class="text">Albemarle Robotics</div>
-      </div>
-
-      <div class="mySlides fade">
-        <img src="/images/NerdsOfTheNorthWide.png" alt="Nerds of the North" />
-        <div class="text">Albemarle Robotics</div>
-      </div>
-
-      <!-- Next and previous buttons -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br />
-
-    <!-- The dots/circles -->
-    <div class="center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+    </header>
 
     <div class="main">
-      <!-- Placeholder Text-->
-      <p class="center">Placeholder Text</p>
-      <p class="center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta illo
-        sapiente ea, nam dignissimos officiis vel reprehenderit distinctio
-        doloribus error doloremque qui deserunt laborum dolor saepe beatae
-        nesciunt dicta hic?
-      </p>
-      <p class="center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quis
-        beatae odio. Doloremque esse, velit repellendus maiores animi aliquid
-        quos quae, molestiae excepturi rerum similique dicta vero assumenda id
-        suscipit.
-      </p>
+      <h1 class="gradient-text">Who We Are</h1>
+      <div class="content center">
+        <p>
+          We are a collection of 4 FTC teams located at Albemarle High School,
+          Virginia, consisting of Firefly, Vertigo, Monotonics, and Paradigm.
+          You may visit the <a href="/teams/">Teams</a> page to learn about the
+          teams individually, but we are one team in spirit.
+        </p>
+      </div>
+      <div class="diagonal-box">
+        <div class="diagonal-content">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
+            veniam dignissimos assumenda corrupti. Pariatur nemo possimus vitae
+            adipisci soluta aut, asperiores ratione officia id voluptatibus,
+            tenetur officiis vel omnis suscipit.
+          </p>
+        </div>
+      </div>
     </div>
   </body>
   <script src="/index.js"></script>
