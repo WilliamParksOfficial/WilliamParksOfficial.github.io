@@ -6,24 +6,21 @@
 
 .diagonal-box {
   margin: 3.6em 0;
+  padding: 5em 0;
   background-image: linear-gradient(to right, red, blue);
   transform: skewY(-8deg);
 }
 
-.diagonal-content {
-  max-width: 50em;
-  margin: 0 auto;
-  padding: 5em 0;
+.diagonal {
   transform: skewY(8deg);
+  color: black;
 }
 
-.content a,
-.diagonal-content a {
+.content a {
   color: blue;
 }
 
-.content a:hover,
-.diagonal-content a:hover {
+.content a:hover {
   color: red;
 }
 
@@ -42,6 +39,7 @@
   border-radius: 1rem;
   background-color: black;
   color: white;
+  padding: 0 1rem;
 }
 
 .role-block:hover {
@@ -126,10 +124,6 @@
     font-size: 1rem;
   }
 
-  .main a {
-    font-size: 1.2rem;
-  }
-
   .role-block-container {
     grid-template-columns: repeat(1, 20rem);
   }
@@ -144,10 +138,6 @@
   .main {
     margin: 0;
     font-size: 1.2rem;
-  }
-
-  .main a {
-    font-size: 1.4rem;
   }
 
   .role-block-container {
