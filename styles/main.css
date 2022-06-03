@@ -1,12 +1,8 @@
 .content {
   color: white;
-  padding: 0 5rem;
-  font-size: 1.2rem;
 }
 
 .diagonal-box {
-  margin: 5em 0;
-  padding: 4em 0;
   background-image: linear-gradient(to right, red, blue);
   transform: skewY(-5deg);
 }
@@ -127,6 +123,11 @@
     padding: 0 5rem;
   }
 
+  .diagonal-box {
+    margin: 3em 0;
+    padding: 2em 0;
+  }
+
   .role-block-container {
     grid-template-columns: repeat(1, 20rem);
   }
@@ -144,6 +145,11 @@
 
   .content {
     padding: 0 10rem;
+  }
+
+  .diagonal-box {
+    margin: 5em 0;
+    padding: 4em 0;
   }
 
   .role-block-container {
