@@ -31,11 +31,42 @@
       </nav>
     </header>
 
-    <div class="main">
+    <nav class="sidebar">
+      <a href="/roles/programming/" class="current-page">Home</a>
+      <a
+        onclick="show('intro-to-java-btn', 'intro-to-java', 'Intro to Java')"
+        id="intro-to-java-btn"
+        >&#9660; Intro to Java</a
+      >
+      <div id="intro-to-java" class="dropdown-container hide">
+        <a>Variables</a>
+        <a>Logic</a>
+        <a>Loops</a>
+      </div>
+      <a
+        onclick="show('robotics-programming-btn', 'robotics-programming', 'Robotics Programming')"
+        id="robotics-programming-btn"
+        >&#9660; Robotics Programming</a
+      >
+      <div id="robotics-programming" class="dropdown-container hide">
+        <a>Variables</a>
+        <a>Logic</a>
+        <a>Loops</a>
+      </div>
+    </nav>
+
+    <div class="main with-sidebar">
       <h1 class="center"><span class="gradient-text">Programming</span></h1>
       <div class="content">
         <p class="center">Coming Soon...</p>
+        <p class="center">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+          eligendi quia a, quaerat dignissimos quam consectetur maiores, officia
+          hic iusto qui alias quo eum, minus tempora veritatis totam animi
+          tempore!
+        </p>
       </div>
     </div>
   </body>
+  <script src="/index.js"></script>
 </html>

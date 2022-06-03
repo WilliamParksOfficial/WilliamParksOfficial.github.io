@@ -18,8 +18,20 @@ a {
   color: darkblue;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 .center {
   text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.hide a {
+  display: none;
 }
 
 .gradient-text {

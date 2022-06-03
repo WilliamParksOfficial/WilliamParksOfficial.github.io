@@ -19,6 +19,30 @@ nav {
   color: darkred;
 }
 
+.sidebar {
+  display: block;
+  background-color: rgb(200, 200, 200);
+  color: black;
+  position: fixed;
+  top: 6.5rem;
+  height: 100vh;
+}
+
+.sidebar a {
+  display: block;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  color: darkred;
+}
+
+.dropdown-container {
+  margin-left: 1rem;
+}
+
 /* Slideshow container */
 .slideshow-container {
   width: 100%;
@@ -130,6 +154,12 @@ nav {
   .text {
     font-size: 1.5rem;
   }
+
+  .sidebar {
+    text-align: left;
+    width: 10rem;
+    padding: 0 0.5rem;
+  }
 }
 
 /* if desktop */
@@ -158,5 +188,10 @@ nav {
 
   .text {
     font-size: 3rem;
+  }
+
+  .sidebar {
+    width: 16rem;
+    padding: 0 1rem;
   }
 }
