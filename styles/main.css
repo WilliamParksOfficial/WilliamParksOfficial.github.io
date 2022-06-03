@@ -1,18 +1,18 @@
 .content {
-  max-width: 50em;
-  margin: 0 auto;
   color: white;
+  padding: 0 5rem;
+  font-size: 1.2rem;
 }
 
 .diagonal-box {
-  margin: 3.6em 0;
-  padding: 5em 0;
+  margin: 5em 0;
+  padding: 4em 0;
   background-image: linear-gradient(to right, red, blue);
-  transform: skewY(-8deg);
+  transform: skewY(-5deg);
 }
 
 .diagonal {
-  transform: skewY(8deg);
+  transform: skewY(5deg);
   color: black;
 }
 
@@ -107,12 +107,12 @@
   color: white;
 }
 
-#monotonics-team-block {
+#team4-team-block {
   background-image: radial-gradient(at top left, orange, purple);
   color: black;
 }
 
-#monotonics-team-block:hover {
+#team4-team-block:hover {
   background-image: radial-gradient(at top left, purple, orange);
   color: white;
 }
@@ -121,7 +121,10 @@
 @media (max-aspect-ratio: 1/1), (aspect-ratio: 1/1) {
   .main {
     margin: 0;
-    font-size: 1rem;
+  }
+
+  .content {
+    padding: 0 5rem;
   }
 
   .role-block-container {
@@ -137,7 +140,10 @@
 @media (min-aspect-ratio: 1/1) {
   .main {
     margin: 0;
-    font-size: 1.2rem;
+  }
+
+  .content {
+    padding: 0 10rem;
   }
 
   .role-block-container {
