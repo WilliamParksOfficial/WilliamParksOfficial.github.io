@@ -5,6 +5,9 @@ nav {
   margin: 0;
   width: 100%;
   display: inline-block;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 .nav-logo {
@@ -97,6 +100,7 @@ nav {
   width: 100%;
   position: relative;
   margin: auto;
+  margin-top: 6.5rem;
 }
 
 /* Hide the images by default */
@@ -185,6 +189,10 @@ nav {
     font-size: 1.5rem;
   }
 
+  .below-nav {
+    margin-top: 5rem;
+  }
+
   nav {
     padding: 0;
     height: 4rem;
@@ -208,12 +216,20 @@ nav {
   .sidebar {
     top: 4rem;
   }
+
+  .slideshow-container {
+    margin-top: 4rem;
+  }
 }
 
 /* if desktop */
 @media (min-aspect-ratio: 1/1) {
   .text {
     font-size: 3rem;
+  }
+
+  .below-nav {
+    margin-top: 8rem;
   }
 
   .menu-icon {

@@ -9,6 +9,11 @@ body {
   background-color: rgb(50, 50, 50);
 }
 
+.content h2 {
+  color: black;
+  margin-top: 2rem;
+}
+
 p {
   font-size: 1.2rem;
 }
@@ -38,6 +43,10 @@ a:hover {
   background-image: linear-gradient(to right, purple, blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.vocab {
+  color: red;
 }
 
 /* if mobile */
