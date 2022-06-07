@@ -31,14 +31,20 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-function show(parentId, id, text) {
+function showDropdown(parentId, id, text) {
   let parentElement = document.getElementById(parentId);
   let element = document.getElementById(id);
   if (element.classList.contains("hide")) {
-    element.classList.remove("hide");
     parentElement.innerHTML = "&#9650; " + text;
   } else {
-    element.classList.toggle("hide");
     parentElement.innerHTML = "&#9660; " + text;
   }
+  element.classList.toggle("hide");
+}
+
+function showSidebar(parentId, id) {
+  let parentElement = document.getElementById(parentId);
+  let element = document.getElementById(id);
+  element.classList.toggle("mobile-show");
+  parentElement.classList.toggle("change");
 }

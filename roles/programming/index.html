@@ -14,6 +14,15 @@
     <header>
       <!-- Navbar -->
       <nav>
+        <div
+          class="menu-icon"
+          id="menu-icon"
+          onclick="showSidebar('menu-icon', 'sidebar')"
+        >
+          <div class="bar" id="bar1"></div>
+          <div class="bar" id="bar2"></div>
+          <div class="bar" id="bar3"></div>
+        </div>
         <!-- ACPS Logo -->
         <a href="/">
           <img
@@ -31,10 +40,10 @@
       </nav>
     </header>
 
-    <nav class="sidebar">
+    <nav class="sidebar" id="sidebar">
       <a href="/roles/programming/" class="current-page">Home</a>
       <a
-        onclick="show('intro-to-java-btn', 'intro-to-java', 'Intro to Java')"
+        onclick="showDropdown('intro-to-java-btn', 'intro-to-java', 'Intro to Java')"
         id="intro-to-java-btn"
         >&#9660; Intro to Java</a
       >
@@ -44,7 +53,7 @@
         <a>Loops</a>
       </div>
       <a
-        onclick="show('robotics-programming-btn', 'robotics-programming', 'Robotics Programming')"
+        onclick="showDropdown('robotics-programming-btn', 'robotics-programming', 'Robotics Programming')"
         id="robotics-programming-btn"
         >&#9660; Robotics Programming</a
       >

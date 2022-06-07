@@ -120,10 +120,6 @@
 
 /* if mobile */
 @media (max-aspect-ratio: 1/1), (aspect-ratio: 1/1) {
-  .with-sidebar {
-    margin-left: 10rem;
-  }
-
   .content {
     padding: 0 5rem;
   }
