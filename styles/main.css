@@ -118,6 +118,33 @@
   color: white;
 }
 
+.previous-page,
+.next-page {
+  position: relative;
+  display: inline-block;
+  margin: 3rem 0 4rem;
+}
+
+.next-page {
+  float: right;
+}
+
+.previous-page a,
+.next-page a {
+  color: black;
+  font-size: 1.4rem;
+  background-color: blue;
+  border: 2px solid black;
+  border-radius: 0.4rem;
+  padding: 1rem;
+}
+
+.previous-page a:hover,
+.next-page a:hover {
+  background-color: red;
+  color: black;
+}
+
 /* if mobile */
 @media (max-aspect-ratio: 1/1), (aspect-ratio: 1/1) {
   .content {
@@ -127,6 +154,11 @@
   .diagonal-box {
     margin: 3em 0;
     padding: 2em 0;
+  }
+
+  .previous-page a,
+  .next-page a {
+    font-size: 1.2rem;
   }
 
   .role-block-container {
@@ -141,7 +173,7 @@
 /* if desktop */
 @media (min-aspect-ratio: 1/1) {
   .with-sidebar {
-    margin-left: 15rem;
+    margin-left: 16rem;
   }
 
   .content {

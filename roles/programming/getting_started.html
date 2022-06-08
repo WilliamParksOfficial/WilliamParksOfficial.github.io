@@ -66,7 +66,7 @@
         </p>
         <h2>Setting up GitHub</h2>
         <p>
-          &emsp;Next you'll need to create a
+          &emsp;Next we'll need to create a
           <a href="https://github.com/" target="_blank" rel="noopener"
             >GitHub</a
           >
@@ -79,10 +79,10 @@
           repository.
         </p>
         <p>
-          In addition to its collaboratibe features, GitHub is a very useful
-          tool due to the fact that all repositories use a version control
-          system called <span class="vocab">Git</span>, meaning that you can
-          <span class="vocab">commit</span> (save) your work at any time to
+          &emsp;In addition to its collaboratibe features, GitHub is a very
+          useful tool due to the fact that all repositories use a version
+          control system called <span class="vocab">Git</span>, meaning that you
+          can <span class="vocab">commit</span> (save) your work at any time to
           create a checkpoint, as well as revert your repository to the state of
           any previous commits. Visit the
           <a href="https://git-scm.com/" target="_blank" rel="noopener"
@@ -113,7 +113,58 @@
           the default, and leave the description blank, but this is unimportant.
         </p>
         <h2>Connecting GitHub to Android Studio</h2>
-        <p>&emsp;</p>
+        <p>
+          &emsp;Next we need to connect our GitHub account to Android Studio so
+          that we can easily <span class="vocab">push</span> our changes to the
+          online GitHub repository from our development environment so that our
+          collaborators can see our changes.
+        </p>
+        <p>
+          &emsp;The first step to accomplish this is generating a
+          <span class="vocab">Personal Access Token</span> on GitHub. To do so,
+          go to your profile picture on the top right hand corner of GitHub, and
+          click on settings in the dropdown menu. Next, find Developer Settings
+          in the sidebar, and click Personal Access Tokens followed by Generate
+          New Token. Finally, enter a note like "Connect GitHub to Android
+          Studio", set the expiration to no expiration, and check the checkboxes
+          for all permissions. This should generate a series of random
+          characters that you need to copy.
+        </p>
+        <p>
+          &emsp;Now, in Android Studio, select Get from VCS on the Projects
+          page, and click GitHub on the sidebar. Now you'll be presented with
+          two options, and you MUST select Use token, as the Log In via GitHub
+          option is not functional at the time of writing. Next, you simply need
+          to paste the token you copied, and click Log In. Now you should be
+          presented with all of your GitHub repositories, and you need to select
+          FtcRobotController (or whatever you named your repository) and hit the
+          <span class="vocab">Clone</span> button. If it asks you if you would
+          like to Trust the project, accept.
+        </p>
+        <h2>Finishing Up</h2>
+        <p>
+          &emsp;Now you should be inside of your project, where you'll be able
+          to see the progress of various downloading and indexing tasks at the
+          bottom of your screen. You'll need to wait for these to be completed
+          before you begin coding. However, you may get various pop-ups while
+          these are downloading that tell you that something in your project can
+          be upgraded, but DO NOT accept. The project was created to work with
+          very specific versions of each tool, and upgrading these could cause
+          problems down the line.
+        </p>
+        <p>
+          &emsp;If you face any other problems, start by troubleshooting for
+          yourself and researching your problem, but you may also email
+          emmett.lach@gmail.com. However, if all downloading and indexing is
+          completed without any problems, your development environment is ready,
+          and you may move on to the next section.
+        </p>
+        <div class="previous-page">
+          <a href="./index.html">Previous Page</a>
+        </div>
+        <div class="next-page">
+          <a href="./getting_started.html">Next Page</a>
+        </div>
       </div>
     </div>
   </body>
