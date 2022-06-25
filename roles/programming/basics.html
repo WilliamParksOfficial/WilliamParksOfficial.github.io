@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming | Albemarle Robotics</title>
+    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/styles/globals.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav>
+        <div
+          class="menu-icon"
+          id="menu-icon"
+          onclick="showSidebar('menu-icon', 'sidebar')"
+        >
+          <div class="bar" id="bar1"></div>
+          <div class="bar" id="bar2"></div>
+          <div class="bar" id="bar3"></div>
+        </div>
+        <!-- ACPS Logo -->
+        <a href="/">
+          <img
+            class="nav-logo"
+            src="/images/acps/ACPSLogoDark.png"
+            alt="Albemarle County Public Schools Dark Logo"
+          />
+        </a>
+        <!-- Page Links -->
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/roles/" class="current-page">Roles</a>
+          <a href="/teams/">Teams</a>
+        </div>
+      </nav>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+      <a href="/roles/programming/">Home</a>
+      <a href="/roles/programming/getting_started.html">Getting Started</a>
+      <a href="/roles/programming/basics.html" class="current-page"
+        >The Basics</a
+      >
+    </nav>
+
+    <div class="main with-sidebar below-nav">
+      <h1 class="center">
+        <span class="gradient-text">The Basics</span>
+      </h1>
+      <div class="content">
+        <h2>Where Do We Write Our Code?</h2>
+        <p>
+          &emsp;We'll begin by navigating to the correct folder within our
+          project to write our code in. You can start by closing the README.md
+          file, as it's simply a text file with the project's description. Now,
+          on the Android Studio sidebar you can see on the full list of all
+          folders within your project, and you'll do all of your coding in
+          <span class="vocab"
+            >TeamCode/java/org.firstinspires.ftc.teamcode</span
+          >
+        </p>
+        <p>
+          &emsp;Once you reveal the
+          <span class="vocab">org.firstinspires.ftc.teamcode</span> folder on
+          your sidebar, right click on it, and select
+          <span class="vocab">New Java Class</span>. Name your new file
+          <span class="vocab">BasicOpMode_Iterative.java</span>. This will be
+          our file for the <span class="vocab">TeleOp</span> portion of our game
+          when we can control our robot with a controller. We will code the
+          <span class="vocab">Autonomous</span> portion of our game later in a
+          separate file.
+        </p>
+        <h2>Necessary Utilities</h2>
+        <p>
+          &emsp;You should now be greeted with a blank file (other than the
+          package statement), but before you can start controlling your robot,
+          you need to import the necessary utilities. It's alright if you do not
+          know exactly what this implies yet, but you can think of it like this:
+          The Java programming language provides us with some tools already, but
+          we're grabbing some extra tools to specifically help us with
+          programming the robot. Simply copy the following lines of code into
+          your program:
+        </p>
+        <div class="code">
+          <code>
+            <span class="orange">import</span>
+            com.qualcomm.robotcore.eventloop.opmode.OpMode<span class="orange"
+              >;</span
+            ><br />
+            <span class="orange">import</span>
+            com.qualcomm.robotcore.eventloop.opmode.<span class="yellow"
+              >TeleOp</span
+            ><span class="orange">;</span><br />
+            <span class="orange">import</span>
+            com.qualcomm.robotcore.hardware.DcMotor<span class="orange">;</span
+            ><br />
+            <span class="orange">import</span>
+            com.qualcomm.robotcore.util.Range<span class="orange">;</span><br />
+          </code>
+        </div>
+        <h2>Program Structure</h2>
+        <p>
+          &emsp;Next, copy these line of code into the program after your import
+          statements.
+        </p>
+        <div class="code">
+          <code
+            ><span class="yellow">@TeleOp</span>(name=<span class="green"
+              >"Basic: Iterative OpMode"</span
+            ><span class="orange">,</span> group=<span class="green"
+              >"Iterative Opmode"</span
+            >)<br />
+            <span class="orange">public class</span> BasicOpMode_Iterative
+            <span class="orange">extends</span> OpMode {<br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow">@Override</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">public void</span>
+            <span class="tan">init</span>() {<br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow">@Override</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">public void</span>
+            <span class="tan">loop</span>() {<br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            }</code
+          >
+        </div>
+        <p>
+          &emsp;<span class="vocab">init</span> and
+          <span class="vocab">loop</span> are both
+          <span class="vocab">functions</span>. Functions are blocks of code
+          that can later be executed. The
+          <span class="vocab">init</span> function is executed upon hitting the
+          Init (initialize) button on your driver phone, and the
+          <span class="vocab">loop</span> function is executed repeatedly,
+          starting upon pressing the Start button, and ending upon pressing the
+          Stop button.
+        </p>
+        <div class="previous-page">
+          <a href="./getting_started.html">Previous Page</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/index.js"></script>
+</html>

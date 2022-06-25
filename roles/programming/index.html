@@ -14,6 +14,15 @@
     <header>
       <!-- Navbar -->
       <nav>
+        <div
+          class="menu-icon"
+          id="menu-icon"
+          onclick="showSidebar('menu-icon', 'sidebar')"
+        >
+          <div class="bar" id="bar1"></div>
+          <div class="bar" id="bar2"></div>
+          <div class="bar" id="bar3"></div>
+        </div>
         <!-- ACPS Logo -->
         <a href="/">
           <img
@@ -31,11 +40,44 @@
       </nav>
     </header>
 
-    <div class="main">
+    <nav class="sidebar" id="sidebar">
+      <a href="/roles/programming/" class="current-page">Home</a>
+      <a href="/roles/programming/getting_started.html">Getting Started</a>
+      <a href="/roles/programming/basics.html">The Basics</a>
+    </nav>
+
+    <div class="main with-sidebar below-nav">
       <h1 class="center"><span class="gradient-text">Programming</span></h1>
       <div class="content">
-        <p class="center">Coming Soon...</p>
+        <h2>What Does a Programmer Do in Robotics?</h2>
+        <p>
+          &emsp;Program the actions that the robot will take with the Java
+          programming language in the Android Studio development environment.
+          There are two parts of the game that we need to program. The first,
+          <span class="vocab">Autonomous</span>, is when the robot is controlled
+          with a predefined set of moves. The second,
+          <span class="vocab">TeleOp</span> is when the robot is controlled with
+          a controller. We will code both of these options in two separate
+          files.
+        </p>
+        <h2>Tutorials</h2>
+        <p>
+          &emsp;The tutorials (see sidebar) do not require an understanding of
+          programming or the Java programming language, but it does help. If you
+          have questions at any point, see the
+          <a
+            href="https://www.w3schools.com/java/"
+            target="_blank"
+            rel="noopener"
+            >W3 Schools Java Tutorial</a
+          >, email emmett.lach@gmail.com, or look up your question. There are
+          many online resources for programming.
+        </p>
+        <div class="next-page">
+          <a href="./getting_started.html">Next Page</a>
+        </div>
       </div>
     </div>
   </body>
+  <script src="/index.js"></script>
 </html>

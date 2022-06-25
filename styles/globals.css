@@ -9,6 +9,11 @@ body {
   background-color: rgb(50, 50, 50);
 }
 
+.content h2 {
+  color: black;
+  margin-top: 2rem;
+}
+
 p {
   font-size: 1.2rem;
 }
@@ -18,14 +23,61 @@ a {
   color: darkblue;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 .center {
   text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.hide a {
+  display: none;
 }
 
 .gradient-text {
   background-image: linear-gradient(to right, purple, blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.vocab {
+  color: red;
+}
+
+.code {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  width: max-content;
+  max-height: 10rem;
+  overflow: scroll;
+}
+
+.orange {
+  color: orange;
+}
+
+.purple {
+  color: mediumpurple;
+}
+
+.green {
+  color: palegreen;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.tan {
+  color: tan;
 }
 
 /* if mobile */
@@ -37,4 +89,7 @@ a {
 
 /* if desktop */
 @media (min-aspect-ratio: 1/1) {
+  .desktop-hide {
+    display: none;
+  }
 }

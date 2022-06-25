@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming | Albemarle Robotics</title>
+    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/styles/globals.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav>
+        <div
+          class="menu-icon"
+          id="menu-icon"
+          onclick="showSidebar('menu-icon', 'sidebar')"
+        >
+          <div class="bar" id="bar1"></div>
+          <div class="bar" id="bar2"></div>
+          <div class="bar" id="bar3"></div>
+        </div>
+        <!-- ACPS Logo -->
+        <a href="/">
+          <img
+            class="nav-logo"
+            src="/images/acps/ACPSLogoDark.png"
+            alt="Albemarle County Public Schools Dark Logo"
+          />
+        </a>
+        <!-- Page Links -->
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/roles/" class="current-page">Roles</a>
+          <a href="/teams/">Teams</a>
+        </div>
+      </nav>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+      <a href="/roles/programming/">Home</a>
+      <a href="/roles/programming/getting_started.html" class="current-page"
+        >Getting Started</a
+      >
+      <a href="/roles/programming/basics.html">The Basics</a>
+    </nav>
+
+    <div class="main with-sidebar below-nav">
+      <h1 class="center">
+        <span class="gradient-text">Getting Started</span>
+      </h1>
+      <div class="content">
+        <h2>Installing Android Studio</h2>
+        <p>
+          &emsp;Begin by installing
+          <a
+            href="https://developer.android.com/studio"
+            target="_blank"
+            rel="noopener"
+            >Android Studio</a
+          >. This is our <span class="vocab">Development Environment</span>.
+          This means that it is an app that we'll be writing our code in.
+          Default installation settings are recommended.
+        </p>
+        <h2>Setting up GitHub</h2>
+        <p>
+          &emsp;Next we'll need to create a
+          <a href="https://github.com/" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+          account. However, DO NOT use your school email address. You need to
+          use a personal email address, as many school email addresses block the
+          GitHub verification email. This is very important, as GitHub is what
+          we use to collaborate with each other on a single
+          <span class="vocab">repository</span> (project), as well as
+          <span class="vocab">fork</span> (make a copy of) the starting FTC
+          repository.
+        </p>
+        <p>
+          &emsp;In addition to its collaboratibe features, GitHub is a very
+          useful tool due to the fact that all repositories use a version
+          control system called <span class="vocab">Git</span>, meaning that you
+          can <span class="vocab">commit</span> (save) your work at any time to
+          create a checkpoint, as well as revert your repository to the state of
+          any previous commits. Visit the
+          <a href="https://git-scm.com/" target="_blank" rel="noopener"
+            >Git Website</a
+          >
+          to learn more.
+        </p>
+        <h2>Create Project</h2>
+        <p>
+          &emsp;Now we need to create the GitHub repository that we'll be using
+          for our project. If someone on your team already has a GitHub
+          repository for this purpose, ask them to add you as a collaborator,
+          and skip to the "Connecting GitHub to Android Studio" section
+        </p>
+        <p>
+          &emsp;Otherwise, go to the
+          <a
+            href="https://github.com/FIRST-Tech-Challenge/FtcRobotController.git"
+            target="_blank"
+            rel="noopener"
+            >FtcRobotController</a
+          >
+          GitHub repository, and make sure you are signed into your GitHub
+          account. Then, click the
+          <span class="vocab">fork</span> button in the upper right hand corner
+          of the page. This will create a copy that you can edit. Here you will
+          be able to select the name and description. You may leave the name as
+          the default, and leave the description blank, but this is unimportant.
+        </p>
+        <h2>Connecting GitHub to Android Studio</h2>
+        <p>
+          &emsp;Next we need to connect our GitHub account to Android Studio so
+          that we can easily <span class="vocab">push</span> our changes to the
+          online GitHub repository from our development environment so that our
+          collaborators can see our changes.
+        </p>
+        <p>
+          &emsp;The first step to accomplish this is generating a
+          <span class="vocab">Personal Access Token</span> on GitHub. To do so,
+          go to your profile picture on the top right hand corner of GitHub, and
+          click on settings in the dropdown menu. Next, find Developer Settings
+          in the sidebar, and click Personal Access Tokens followed by Generate
+          New Token. Finally, enter a note like "Connect GitHub to Android
+          Studio", set the expiration to no expiration, and check the checkboxes
+          for all permissions. This should generate a series of random
+          characters that you need to copy.
+        </p>
+        <p>
+          &emsp;Now, in Android Studio, select Get from VCS on the Projects
+          page, and click GitHub on the sidebar. Now you'll be presented with
+          two options, and you MUST select Use token, as the Log In via GitHub
+          option is not functional at the time of writing. Next, you simply need
+          to paste the token you copied, and click Log In. Now you should be
+          presented with all of your GitHub repositories, and you need to select
+          FtcRobotController (or whatever you named your repository) and hit the
+          <span class="vocab">Clone</span> button. If it asks you if you would
+          like to Trust the project, accept.
+        </p>
+        <h2>Finishing Up</h2>
+        <p>
+          &emsp;Now you should be inside of your project, where you'll be able
+          to see the progress of various downloading and indexing tasks at the
+          bottom of your screen. You'll need to wait for these to be completed
+          before you begin coding. However, you may get various pop-ups while
+          these are downloading that tell you that something in your project can
+          be upgraded, but DO NOT accept. The project was created to work with
+          very specific versions of each tool, and upgrading these could cause
+          problems down the line.
+        </p>
+        <p>
+          &emsp;If you face any other problems, start by troubleshooting for
+          yourself and researching your problem, but you may also email
+          emmett.lach@gmail.com. However, if all downloading and indexing is
+          completed without any problems, your development environment is ready,
+          and you may move on to the next section.
+        </p>
+        <div class="previous-page">
+          <a href="./">Previous Page</a>
+        </div>
+        <div class="next-page">
+          <a href="./basics.html">Next Page</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/index.js"></script>
+</html>
