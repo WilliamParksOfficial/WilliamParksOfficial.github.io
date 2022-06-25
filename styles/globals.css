@@ -57,7 +57,7 @@ a:hover {
   padding: 0.5rem 1rem;
   width: max-content;
   max-height: 10rem;
-  overflow-y: auto;
+  overflow: scroll;
 }
 
 .orange {
@@ -69,11 +69,15 @@ a:hover {
 }
 
 .green {
-  color: green;
+  color: palegreen;
 }
 
 .yellow {
   color: yellow;
+}
+
+.tan {
+  color: tan;
 }
 
 /* if mobile */

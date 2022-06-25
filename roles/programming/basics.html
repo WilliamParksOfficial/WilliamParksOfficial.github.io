@@ -89,10 +89,6 @@
         <div class="code">
           <code>
             <span class="orange">import</span>
-            com.qualcomm.robotcore.eventloop.opmode.<span class="yellow"
-              >Disabled</span
-            ><span class="orange">;</span><br />
-            <span class="orange">import</span>
             com.qualcomm.robotcore.eventloop.opmode.OpMode<span class="orange"
               >;</span
             ><br />
@@ -104,12 +100,49 @@
             com.qualcomm.robotcore.hardware.DcMotor<span class="orange">;</span
             ><br />
             <span class="orange">import</span>
-            com.qualcomm.robotcore.util.ElapsedTime<span class="orange">;</span
-            ><br />
-            <span class="orange">import</span>
             com.qualcomm.robotcore.util.Range<span class="orange">;</span><br />
           </code>
         </div>
+        <h2>Program Structure</h2>
+        <p>
+          &emsp;Next, copy these line of code into the program after your import
+          statements.
+        </p>
+        <div class="code">
+          <code
+            ><span class="yellow">@TeleOp</span>(name=<span class="green"
+              >"Basic: Iterative OpMode"</span
+            ><span class="orange">,</span> group=<span class="green"
+              >"Iterative Opmode"</span
+            >)<br />
+            <span class="orange">public class</span> BasicOpMode_Iterative
+            <span class="orange">extends</span> OpMode {<br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow">@Override</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">public void</span>
+            <span class="tan">init</span>() {<br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow">@Override</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">public void</span>
+            <span class="tan">loop</span>() {<br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            }</code
+          >
+        </div>
+        <p>
+          &emsp;<span class="vocab">init</span> and
+          <span class="vocab">loop</span> are both
+          <span class="vocab">functions</span>. Functions are blocks of code
+          that can later be executed. The
+          <span class="vocab">init</span> function is executed upon hitting the
+          Init (initialize) button on your driver phone, and the
+          <span class="vocab">loop</span> function is executed repeatedly,
+          starting upon pressing the Start button, and ending upon pressing the
+          Stop button.
+        </p>
         <div class="previous-page">
           <a href="./getting_started.html">Previous Page</a>
         </div>
