@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming | Albemarle Robotics</title>
+    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/styles/globals.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav>
+        <div
+          class="menu-icon"
+          id="menu-icon"
+          onclick="showSidebar('menu-icon', 'sidebar')"
+        >
+          <div class="bar" id="bar1"></div>
+          <div class="bar" id="bar2"></div>
+          <div class="bar" id="bar3"></div>
+        </div>
+        <!-- ACPS Logo -->
+        <a href="/">
+          <img
+            class="nav-logo"
+            src="/images/acps/ACPSLogoDark.png"
+            alt="Albemarle County Public Schools Dark Logo"
+          />
+        </a>
+        <!-- Page Links -->
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/roles/" class="current-page">Roles</a>
+          <a href="/teams/">Teams</a>
+        </div>
+      </nav>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+      <a href="/roles/programming/">Home</a>
+      <a href="/roles/programming/getting_started.html">Getting Started</a>
+      <a href="/roles/programming/basics.html">The Basics</a>
+      <a href="/roles/programming/motor_setup.html" class="current-page"
+        >Motor Setup</a
+      >
+    </nav>
+
+    <div class="main with-sidebar below-nav">
+      <h1 class="center">
+        <span class="gradient-text">Motor Setup</span>
+      </h1>
+      <div class="content">
+        <h2>Initializing Motor Variables</h2>
+        <p>
+          &emsp;The first thing we need to do when adding motor functionality to
+          our project, is initializing the variables for our motors. Do so by
+          copying the following lines of code into your project. It should be
+          inside of the BasicOpMode_Iterative class brackets, but before the
+          <span class="vocab">init</span> or
+          <span class="vocab">loop</span> functions.
+        </p>
+        <div class="code">
+          <code
+            ><span class="yellow">@TeleOp</span>(name=<span class="green"
+              >"Basic: Iterative OpMode"</span
+            ><span class="orange">,</span> group=<span class="green"
+              >"Iterative Opmode"</span
+            >)<br />
+            <span class="orange">public class</span> BasicOpMode_Iterative
+            <span class="orange">extends</span> OpMode {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">private</span> DcMotor
+            <span class="purple">frontLeftMotor</span> =
+            <span class="orange">null;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">private</span> DcMotor
+            <span class="purple">frontRightMotor</span> =
+            <span class="orange">null;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">private</span> DcMotor
+            <span class="purple">backLeftMotor</span> =
+            <span class="orange">null;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">private</span> DcMotor
+            <span class="purple">backRightMotor</span> =
+            <span class="orange">null;</span><br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow">@Override</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">public void</span>
+            <span class="tan">init</span>() {<br
+          /></code>
+        </div>
+        <p>
+          &emsp;And, of course, the number of the variables that you create, as
+          well as the names of your motors, will vary based on the design of
+          your robot.
+        </p>
+        <h2>Connecting Motor Variables to the Physical Motors</h2>
+        <p>
+          &emsp;The second step in adding motor functionality to our robot is
+          connecting our motor variables to the physical motors. This is done
+          through the <span class="vocab">hardwareMap</span>, which is what the
+          FTC Robot Controller app uses as an interface with the robot. To do
+          this, copy the following lines of code into the
+          <span class="vocab">init</span> function of your project.
+        </p>
+        <div class="code">
+          <code>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow">@Override</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">public void</span>
+            <span class="tan">init</span>() {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >frontLeftMotor</span
+            >
+            = <span class="purple">hardwareMap</span>.get(DcMotor.<span
+              class="orange"
+              >class,</span
+            >
+            <span class="green">"front_left_motor"</span>)<span class="orange"
+              >;</span
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >frontRightMotor</span
+            >
+            = <span class="purple">hardwareMap</span>.get(DcMotor.<span
+              class="orange"
+              >class,</span
+            >
+            <span class="green">"front_right_motor"</span>)<span class="orange"
+              >;</span
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >backLeftMotor</span
+            >
+            = <span class="purple">hardwareMap</span>.get(DcMotor.<span
+              class="orange"
+              >class,</span
+            >
+            <span class="green">"back_left_motor"</span>)<span class="orange"
+              >;</span
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >backRightMotor</span
+            >
+            = <span class="purple">hardwareMap</span>.get(DcMotor.<span
+              class="orange"
+              >class,</span
+            >
+            <span class="green">"back_right_motor"</span>)<span class="orange"
+              >;</span
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}</code
+          >
+        </div>
+        <p>
+          &emsp;One important thing to note here, is that the purple variable
+          names to the left of the equal signs must match the names of the
+          variables you initialized earlier, and the green strings must match
+          the names of your motors in the robot configuration on the FTC Robot
+          Controller app on your phone.
+        </p>
+        <h2>Additional Setup</h2>
+        <p>
+          &emsp;There are a few more things we need to do. First, we need to
+          reverse the directions of the motors on the right side of the robot
+          due to their orientation. Next, we set the
+          <span class="vocab">RunMode</span> to
+          <span class="vocab">RUN_WITHOUT_ENCODER</span>. Encoders track the
+          rotations of your motors, and if you would like to use them, use the
+          <span class="vocab">RunMode</span>
+          <span class="vocab">RUN_USING_ENCODER</span> instead. Third, we need
+          to set the <span class="vocab">ZeroPowerBehavior</span> to
+          <span class="vocab">BRAKE</span> so that our robot can't be pushed
+          around just because the motors aren't moving at the moment. Finally,
+          we set the motor powers to zero for good measure. Copy the following
+          lines of code into your program, after the connection of the motor
+          variables to the physical motors, but before the closing bracket of
+          the <span class="vocab">init</span> function.
+        </p>
+        <div class="code">
+          <code
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+              class="purple"
+              >frontLeftMotor</span
+            >.setDirection(DcMotor.Direction.<span class="purple">FORWARD</span
+            >)<span class="orange">;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >frontRightMotor</span
+            >.setDirection(DcMotor.Direction.<span class="purple">REVERSE</span
+            >)<span class="orange">;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >backLeftMotor</span
+            >.setDirection(DcMotor.Direction.<span class="purple">FORWARD</span
+            >)<span class="orange">;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >backRightMotor</span
+            >.setDirection(DcMotor.Direction.<span class="purple">REVERSE</span
+            >)<span class="orange">;</span><br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >frontLeftMotor</span
+            >.setMode(DcMotor.RunMode.<span class="purple"
+              >RUN_WITHOUT_ENCODER</span
+            >)<span class="orange">;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >frontRightMotor</span
+            >.setMode(DcMotor.RunMode.<span class="purple"
+              >RUN_WITHOUT_ENCODER</span
+            >)<span class="orange">;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >backLeftMotor</span
+            >.setMode(DcMotor.RunMode.<span class="purple"
+              >RUN_WITHOUT_ENCODER</span
+            >)<span class="orange">;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >backRightMotor</span
+            >.setMode(DcMotor.RunMode.<span class="purple"
+              >RUN_WITHOUT_ENCODER</span
+            >)<span class="orange">;</span><br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >frontLeftMotor</span
+            >.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.<span
+              class="purple"
+              >BRAKE</span
+            >)<span class="orange">;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >frontRightMotor</span
+            >.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.<span
+              class="purple"
+              >BRAKE</span
+            >)<span class="orange">;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >backLeftMotor</span
+            >.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.<span
+              class="purple"
+              >BRAKE</span
+            >)<span class="orange">;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >backRightMotor</span
+            >.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.<span
+              class="purple"
+              >BRAKE</span
+            >)<span class="orange">;</span><br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >frontLeftMotor</span
+            >.setPower(<span class="blue">0</span>)<span class="orange">;</span
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >frontRightMotor</span
+            >.setPower(<span class="blue">0</span>)<span class="orange">;</span
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >backLeftMotor</span
+            >.setPower(<span class="blue">0</span>)<span class="orange">;</span
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >backRightMotor</span
+            >.setPower(<span class="blue">0</span>)<span class="orange">;</span
+            ><br />
+          </code>
+        </div>
+        <div class="previous-page">
+          <a href="./basics.html">Previous Page</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/index.js"></script>
+</html>
