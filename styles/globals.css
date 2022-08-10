@@ -57,7 +57,7 @@ a:hover {
   padding: 0.5rem 1rem;
   width: max-content;
   max-height: 14.3rem;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .orange {
