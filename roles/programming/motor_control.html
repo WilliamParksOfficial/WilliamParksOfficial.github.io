@@ -55,6 +55,117 @@
         <span class="gradient-text">Motor Control</span>
       </h1>
       <div class="content">
+        <p>
+          &emsp;In order to control the motor variables that we setup in the
+          <a href="./motor_setup.html" target="_blank">Motor Setup</a> portion
+          of this tutorial, we need to start by initiating some useful
+          variables. Copy the following lines of code into the
+          <span class="vocab">BasicOpMode_Iterative</span> class of your
+          program, but before the <span class="vocab">init</span> or
+          <span class="vocab">loop</span> functions.
+        </p>
+        <div class="code">
+          <code
+            ><span class="yellow">@TeleOp</span>(name=<span class="green"
+              >"Basic: Iterative OpMode"</span
+            ><span class="orange">,</span> group=<span class="green"
+              >"Iterative Opmode"</span
+            >)<br />
+            <span class="orange">public class</span> BasicOpMode_Iterative
+            <span class="orange">extends</span> OpMode {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">double</span>
+            leftPower<span class="orange">;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">double</span>
+            RightPower<span class="orange">;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">double</span>
+            drive<span class="orange">;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">double</span> turn<span
+              class="orange"
+              >;</span
+            >
+          </code>
+        </div>
+        <p>
+          &emsp;Next we'll be utilizing these variables to adjust the motor
+          power based on controller inputs. We'll do this by mapping the
+          controller inputs to the drive and turn variables, using those
+          variables to calculate left and right motor power, and then setting
+          the motor powers to the left and right motor power variables. Copy the
+          following lines of code into the
+          <span class="vocab">loop</span> function of your program.
+        </p>
+        <div class="code">
+          <code>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow">@Override</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">public void</span>
+            <span class="tan">loop</span>() {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >drive</span
+            >
+            = -<span class="purple">gamepad1.left_stick_y</span
+            ><span class="orange">;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >turn</span
+            >
+            = <span class="purple">gamepad1.right_stick_x</span
+            ><span class="orange">;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >leftPower</span
+            >
+            = Range.clip(<span class="purple">drive</span> +
+            <span class="purple">turn</span><span class="orange">,</span> -<span
+              class="blue"
+              >1.0</span
+            ><span class="orange">,</span> <span class="blue">1.0</span>)<span
+              class="orange"
+              >;</span
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >rightPower</span
+            >
+            = Range.clip(<span class="purple">drive</span> -
+            <span class="purple">turn</span><span class="orange">,</span> -<span
+              class="blue"
+              >1.0</span
+            ><span class="orange">,</span> <span class="blue">1.0</span>)<span
+              class="orange"
+              >;</span
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >frontLeftMotor</span
+            >.setPower(<span class="purple">leftPower</span>)<span
+              class="orange"
+              >;</span
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >frontRightMotor</span
+            >.setPower(<span class="purple">rightPower</span>)<span
+              class="orange"
+              >;</span
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >backLeftMotor</span
+            >.setPower(<span class="purple">leftPower</span>)<span
+              class="orange"
+              >;</span
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple"
+              >backRightMotor</span
+            >.setPower(<span class="purple">rightPower</span>)<span
+              class="orange"
+              >;</span
+            >
+          </code>
+        </div>
+        <p>
+          &emsp;One thing to note here are that the minus sign before the first
+          gamepad1, is flipping the value that the controller outputs, because
+          controller y values are flipped by default, so this unflips it. Also,
+          all that the Range function is doing is making sure that the output of
+          the drive and turn calculations isn't lower than -1 or higher than 1,
+          as that's the only range of inputs that the motor powers can accept.
+        </p>
+        <p>&emsp;Now we have a fully functional Iterative OpMode!</p>
         <div class="previous-page">
           <a href="./motor_setup.html">Previous Page</a>
         </div>
