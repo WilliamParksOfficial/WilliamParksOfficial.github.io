@@ -79,12 +79,12 @@
 }
 
 #paradigm-team-block {
-  background-image: radial-gradient(at bottom right, orange, blue);
+  background-image: radial-gradient(at bottom right, orange, purple);
   color: black;
 }
 
 #paradigm-team-block:hover {
-  background-image: radial-gradient(at bottom right, blue, orange);
+  background-image: radial-gradient(at bottom right, purple, orange);
   color: white;
 }
 
@@ -108,13 +108,13 @@
   color: white;
 }
 
-#team4-team-block {
-  background-image: radial-gradient(at top left, orange, purple);
+#deepblue-team-block {
+  background-image: radial-gradient(at top left, orange, blue);
   color: black;
 }
 
-#team4-team-block:hover {
-  background-image: radial-gradient(at top left, purple, orange);
+#deepblue-team-block:hover {
+  background-image: radial-gradient(at top left, blue, orange);
   color: white;
 }
 
