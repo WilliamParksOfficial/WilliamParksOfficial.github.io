@@ -4,7 +4,8 @@
 }
 
 .content {
-  color: white;
+  color: black;
+  font-family: Open Sans, sans-serif;
 }
 
 .diagonal-box {
@@ -14,7 +15,7 @@
 
 .diagonal {
   transform: skewY(5deg);
-  color: black;
+  color: white;
 }
 
 .content a {
@@ -38,7 +39,7 @@
   display: inline-block;
   border: 2px solid black;
   border-radius: 1rem;
-  background-color: black;
+  background-color: grey;
   color: white;
   padding: 0 1rem;
 }
