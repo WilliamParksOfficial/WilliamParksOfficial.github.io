@@ -149,7 +149,7 @@
 /* if mobile */
 @media (max-aspect-ratio: 1/1), (aspect-ratio: 1/1) {
   .content {
-    padding: 0 5rem;
+    padding: 0 1rem;
   }
 
   .diagonal-box {
