@@ -1,35 +1,63 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 0;
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
+// Load images from JSON file
+fetch('images/slideshow/listOfImages.json')
+    .then(response => response.json())
+    .then(images => createSlides(images))
+    .catch(error => console.error("Error loading images:", error));
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
+function createSlides(images) {
+    const slideshowimg = document.getElementById("slideimg");
+    const dotsContainer = document.getElementById("dots");
+
+    // Create each slide and dot
+    images.forEach((image, index) => {
+
+        const imgElement = document.createElement("img");
+        imgElement.classList.add("slide");
+        imgElement.src = `/images/slideshow/${image}`;
+        imgElement.alt = image.replace(/\.[^/.]+$/, ""); // Alt text from filename
+
+        slideshowimg.appendChild(imgElement);
+
+        const dot = document.createElement("span");
+        dot.classList.add("dot");
+        dot.onclick = () => currentSlide(index);
+        dotsContainer.appendChild(dot);
+    });
+
+    showSlides(slideIndex);  // Show the first slide
 }
 
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+
+    if (n >= slides.length) { slideIndex = 0 }
+    if (n < 0) { slideIndex = slides.length - 1 }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex].style.display = "block";
+    dots[slideIndex].className += " active";
 }
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+
+
+
 
 function showDropdown(parentId, id, text) {
   let parentElement = document.getElementById(parentId);

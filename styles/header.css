@@ -106,14 +106,7 @@ nav {
   margin-top: 4rem;
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
 
-.mySlides img {
-  width: 100%;
-}
 
 /* Next & previous buttons */
 .prev,
@@ -175,6 +168,9 @@ nav {
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
+}
+#slideimg img{
+  width:100%;
 }
 
 @keyframes fade {
