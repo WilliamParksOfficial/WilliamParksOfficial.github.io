@@ -79,44 +79,70 @@
   font-size: 3rem;
 }
 
+
+
 #paradigm-team-block {
-  background-image: radial-gradient(at bottom right, orange, purple);
-  color: black;
+  background-color:rgb(59, 59, 59);
+  background-image: url('/images/teams/paradigm/paradigm_logo_orange_no_number.svg');
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center 37%;
+  color: white;
+  text-shadow: 
+    1px 1px 0 black;
+  transition: color 0.5s ease, transform 0.5s ease;
 }
 
 #paradigm-team-block:hover {
-  background-image: radial-gradient(at bottom right, purple, orange);
   color: white;
+  transform: scale(1.1);
 }
 
 #firefly-team-block {
-  background-image: radial-gradient(at bottom left, orange, red);
-  color: black;
+  background-color:black;
+  background-image: url('/images/teams/firefly/FireflyLogoColor.svg');
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center 37%;
+  color: white;
+  text-shadow: 
+    1px 1px 0 black;
+  transition: transform 0.5s ease;
 }
 
 #firefly-team-block:hover {
-  background-image: radial-gradient(at bottom left, red, orange);
   color: white;
+  transform: scale(1.1);
 }
 
 #vertigo-team-block {
-  background-image: radial-gradient(at top right, orange, green);
-  color: black;
+  background-color:black;
+  background-image: url('/images/teams/vertigo/Vertigo\ logo\ No\ Name.svg');
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: center 37%;
+  color: white;
+  text-shadow: 
+    1px 1px 0 black;
+  transition: transform 0.5s ease;
 }
 
 #vertigo-team-block:hover {
-  background-image: radial-gradient(at top right, green, orange);
+  background-color: black;
   color: white;
+  transform: scale(1.1);
 }
 
 #deepblue-team-block {
   background-image: radial-gradient(at top left, orange, blue);
-  color: black;
+  color: white;
+  transition: background-image 1s ease, color 1s ease, transform 0.5s ease;
 }
 
 #deepblue-team-block:hover {
   background-image: radial-gradient(at top left, blue, orange);
   color: white;
+  transform: scale(1.1);
 }
 
 .previous-page,
