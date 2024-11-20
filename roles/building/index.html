@@ -9,26 +9,12 @@
     <link rel="stylesheet" href="/styles/globals.css" />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/header.css" />
+    <script src="/globals/scripts/global.js"></script>
   </head>
   <body>
     <header>
       <!-- Navbar -->
-      <nav>
-        <!-- ACPS Logo -->
-        <a href="/">
-          <img
-            class="nav-logo"
-            src="/images/acps/ACPSLogoTransparent.png"
-            alt="Albemarle County Public Schools Logo"
-          />
-        </a>
-        <!-- Page Links -->
-        <div class="nav-links">
-          <a href="/">Home</a>
-          <a href="/roles/" class="current-page">Roles</a>
-          <a href="/teams/">Teams</a>
-        </div>
-      </nav>
+      <CNav class="roles"></CNav>
     </header>
 
     <div class="main below-nav">

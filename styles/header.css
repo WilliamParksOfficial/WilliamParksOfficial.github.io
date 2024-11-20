@@ -23,7 +23,7 @@ nav {
   font-size: 1.8rem;
 }
 
-.nav-links a {
+.nav-links-a {
   display: inline-block;
   line-height: 2rem;
   padding: 0.5rem 0.4rem 0.0rem;
@@ -37,7 +37,7 @@ nav {
 .current-page {
   color: darkred;
   border-bottom: 4px solid red;
-  line-height: 23;
+  line-height: 1;
 }
 
 .menu-icon {
