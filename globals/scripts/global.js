@@ -29,15 +29,21 @@ function replaceTagWithFile(tagName, filePath) {
             const modFileContent=fileContent;
             switch (className) {
               case "home":
-                element.querySelector('#home').classList.add('current-page');
+                element.querySelectorAll('#home').forEach(idElement =>{
+                  idElement.classList.add('current-page');
+                });
               break;
               
               case "roles":
-                element.querySelector('#roles').classList.add('current-page');
+                element.querySelectorAll('#roles').forEach(idElement =>{
+                  idElement.classList.add('current-page');
+                });
               break;
 
               case "teams":
-                element.querySelector('#teams').classList.add('current-page');
+                element.querySelectorAll('#teams').forEach(idElement =>{
+                  idElement.classList.add('current-page');
+                });
               break;
 
               case "dark":
