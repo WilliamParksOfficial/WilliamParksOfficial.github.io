@@ -8,9 +8,80 @@
     />
   </a>
   <!-- Page Links -->
-  <div class="nav-links">
+  <style>
+  .menu-button {
+    display: none;
+    color: blue;
+    position: relative;
+    float: right;
+    padding-right: 10vw;
+    background: none;
+    border: none;
+    font-size: 40px;
+  }
+
+  #menu{
+    font-size: 30px;
+  }
+
+  #icon{
+    display: inline-block;
+    position: relative; /* Enables using `top` to move the icon */
+    top: 3px; /* Adjust this value to move the icon down */
+  }
+
+  #dropdown-menu {
+    position: absolute;
+    top: 100%; /* Position below the button */
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 10;
+  }
+
+  #dropdown-menu a {
+    display: block;
+    font-size: 1.8rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+  
+
+  @media (max-width: 480px) {
+    .visToggle{
+      display:none;
+    }
+
+    .menu-button {
+      display: block;
+    }
+  }
+  </style>
+  
+  <div class="nav-links visToggle">
     <a href="/" id="home" class="nav-links-a">Home</a>
     <a href="/roles/" id="roles" class="nav-links-a">Roles</a>
     <a href="/teams/" id="teams" class="nav-links-a">Teams</a>
+    <a href="/info/" id="info" class="nav-links-a">Info</a>
   </div>
+
+  <button id="menu-button" class="menu-button" >
+   <span id="menu">MENU</span> <span id="icon">☰</span>
+  </button>
+
+  <div id="dropdown-menu" class="dropdown hidden">
+    <a href="/" id="home" class="nav-links-a">Home</a>
+    <a href="/roles/" id="roles" class="nav-links-a">Roles</a>
+    <a href="/teams/" id="teams" class="nav-links-a">Teams</a>
+    <a href="/info/" id="info" class="nav-links-a">Info</a>
+  </div>
+  
 </nav>
