@@ -1,9 +1,10 @@
 body {
   min-height: 70vh;
-  background-color: rgb(56, 56, 56);
+  background-color: rgb(12, 35, 64);
 }
 nav {
-  background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0.3);
+  color:white;
 }
 .off-center-background {
   width: 100%;
