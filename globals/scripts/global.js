@@ -47,6 +47,12 @@ function replaceTagWithFile(tagName, filePath) {
                 });
               break;
 
+              case "info":
+                element.querySelectorAll('#info').forEach(idElement =>{
+                  idElement.classList.add('current-page');
+                });
+              break;
+
               case "dark":
                 element.querySelector('.nav-logo').src="/images/acps/ACPSLogoTransparentDark.png"
               break;
@@ -102,6 +108,12 @@ function replaceTagWithFile(tagName, filePath, scriptPath) {
 
               case "teams":
                 element.querySelectorAll('#teams').forEach(idElement =>{
+                  idElement.classList.add('current-page');
+                });
+              break;
+
+              case "info":
+                element.querySelectorAll('#info').forEach(idElement =>{
                   idElement.classList.add('current-page');
                 });
               break;
