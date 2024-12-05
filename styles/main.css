@@ -94,7 +94,6 @@
 }
 
 #paradigm-team-block:hover {
-  color: white;
   transform: scale(1.1);
 }
 
@@ -111,7 +110,6 @@
 }
 
 #firefly-team-block:hover {
-  color: white;
   transform: scale(1.1);
 }
 
@@ -128,20 +126,22 @@
 }
 
 #vertigo-team-block:hover {
-  background-color: black;
-  color: white;
   transform: scale(1.1);
 }
 
 #deepblue-team-block {
-  background-image: radial-gradient(at top left, orange, blue);
+  background-color: darkblue;
+  background-image: url('/images/teams/deepblue/DeepBlueLogo.png');
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: center 37%;
   color: white;
-  transition: background-image 1s ease, color 1s ease, transform 0.5s ease;
+  text-shadow: 
+    1px 1px 0 black;
+  transition: transform 0.5s ease;
 }
 
 #deepblue-team-block:hover {
-  background-image: radial-gradient(at top left, blue, orange);
-  color: white;
   transform: scale(1.1);
 }
 
